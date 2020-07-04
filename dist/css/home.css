@@ -8,7 +8,6 @@ body {
   --viewPorttHeight: 50vh;
 
 }
-
 .btn{
   border: 2px solid white;
   border: 2px solid var(--lightColor);
@@ -21,14 +20,11 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-
 /* @custom-selector : --nombre .elemto > .hijo; */
-
 .checkbox:checked + .primaryPlaylist-list{
   display:none;
 
 }
-
 .checkbox-label,.radio-label{
   cursor: pointer;
   -webkit-user-select: none;
@@ -42,12 +38,10 @@ body {
   font-size: 20px;
   border-radius: 5px;
 }
-
 .checkbox-label:hover,.checkbox-label:active,.radio-label:hover,.radio-label:active{
   background-color: blue;
   color: white;
 }
-
 /*home layout*/
 .home {
  
@@ -67,7 +61,6 @@ body {
   -ms-grid-rows: 1fr 150px;
   grid-template-rows: 1fr 150px;
 }
-
 .home-sidebar {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -92,7 +85,6 @@ body {
   -ms-grid-column-align: center;
       justify-self: center;
 }
-
 /*Sidebar*/
 .sidebar {
   display: -ms-grid;
@@ -109,7 +101,6 @@ body {
   height: 100vh;
   overflow: auto;
 }
-
 /*Logo*/
 .logo {
 width: calc(100% - 100px);
@@ -125,76 +116,54 @@ height: 50px;
 .logo-image img {
   max-width: 100%;
 }
-
 .sidebarPlaylist {
   overflow: auto;
 }
-
 /*myPlaylist*/
-
 .myPlaylist {
   padding: 0 20px;
 }
-
 .myPlaylist :link:hover,.myPlaylist :visited:hover {
  transform: scale(1.8);
 }
-
 .myPlaylist :-webkit-any-link:hover {
  transform: scale(1.8);
 }
-
 .myPlaylist :-moz-any-link:hover {
  transform: scale(1.8);
 }
-
 .myPlaylist :any-link:hover {
  transform: scale(1.8);
 }
-
-
-.myPlaylist-item  {  
-  & a{
+.myPlaylist-item a{
     color: white;
     text-decoration: none;
     font-size: .8em;
     display: block;
-    margin-bottom: 7px;
-    &:hover {
+    margin-bottom: 7px
+  }
+.myPlaylist-item a:hover {
       text-decoration: underline;
     }
-  }
-  &:last-child a{
+.myPlaylist-item:last-child a{
     margin-bottom: 0;
   }
-  @nest .myPlaylist &{  /* .myPlaylist .myPlaylist-item */
+.myPlaylist .myPlaylist-item  {  /* .myPlaylist .myPlaylist-item */
     border:5px dashed blue
-  }
 }
-
-
 .myPlaylist-item:last-child, .myPlaylist-item:nth-last-of-type(3) {
   background: red
 }
-
 .myPlaylist-item:last-child, .myPlaylist-item:nth-last-of-type(3) {
   background: blue
 }
-
-
-
-
-
 /*playlistFriends*/
-
 .playlistFriends {
   padding: 0;
 }
-
 .playlistFriends-item {
   color: white;
 }
-
 .playlistFriends-item {
   display: flex;
   margin-bottom: 7px;
@@ -209,19 +178,15 @@ height: 50px;
 .playlistFriends-item:hover a {
   text-decoration: underline;
 }
-
 .playlistFriends-item img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .playlistFriends-item span {
   display: inline-block;
 }
-
-
 .home-primary {
   display: -ms-grid;
   display: grid;
@@ -234,14 +199,11 @@ height: 50px;
   padding: 10px;
   overflow: auto;
 }
-
-
 .search {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: search;
 }
-
 .search input {
   background: #f0f0f0;
   font-family: "Lato";
@@ -257,13 +219,11 @@ height: 50px;
   -ms-grid-row-align: center;
       align-self: center;
 }
-
 .primary-user {
   -ms-grid-column-align: end;
       justify-self: end;
   margin: 5px 0;
 }
-
 .user p {
   display: flex;
   align-items: center;
@@ -278,7 +238,6 @@ height: 50px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .primary-list {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -302,11 +261,9 @@ height: 50px;
   display: flex;
   overflow: auto;
 }
-
 .primaryPlaylist-list .primaryPlaylistItem {
   margin-right: 10px;
 }
-
 .primaryPlaylistItem {
   cursor: pointer;
   transition: .3s;
@@ -318,7 +275,6 @@ height: 50px;
 */
 .primaryPlaylistItem-image {
 }
-
 .primaryPlaylistItem img {
   width: 170px;
   height: 256px;
@@ -331,8 +287,6 @@ height: 50px;
   font-size: 14px;
   font-weight: normal;
 }
-
-
 .featuring {
   background: linear-gradient(to right, #ff0000, #ff458b);
   display: flex;
@@ -341,11 +295,9 @@ height: 50px;
   padding-left: 100px;
   color: white;
 }
-
 .featuring-image {
   margin-right: 20px;
 }
-
 .featuring-title {
   margin: 10px;
 }
@@ -353,13 +305,10 @@ height: 50px;
   font-size: 1.3em;
   margin: 10px;
 }
-
-
 .fadeIn {
   -webkit-animation: 3000ms fadeIn;
           animation: 3000ms fadeIn;
 }
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -369,7 +318,6 @@ height: 50px;
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -379,8 +327,6 @@ height: 50px;
     opacity: 1;
   }
 }
-
-
 @media screen and (max-width: 768px) {
   body{
     border: 50px solid blue
