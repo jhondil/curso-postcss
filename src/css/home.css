@@ -2,13 +2,58 @@ body {
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+:root{
+  --darkColor:#171929;
+  --lightColor: white;
 
+  --button: {
+    border: 2px solid var(--lightColor);
+    border-radius: 5px;
+    background: var(--darkColor);
+    color: var(--lightColor);
+    padding: .5em 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+  };
+  --viewPorttHeight: 50vh;
+
+}
+
+.btn{
+  @apply --button;
+}
+
+/* @custom-selector : --nombre .elemto > .hijo; */
+@custom-selector :--chekeable .checkbox-label, .radio-label;
+@custom-selector :--hightlight :hover, :active;
+
+.checkbox:checked + .primaryPlaylist-list{
+  display:none;
+
+}
+
+:--chekeable{
+  cursor: pointer;
+  user-select: none;
+  padding: 3px 7px;
+  border:1px solid color(rojo b(10%));
+  border-bottom: 3px solid red;
+  color:gray(20);
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+:--chekeable:--hightlight{
+  background-color: blue;
+  color: white;
+}
 
 /*home layout*/
 .home {
  
   display: grid;
-  height: 100vh;
+  height: calc(var(--viewPorttHeight)*2);
   grid-template-columns: 350px 1fr;
   grid-template-rows: 1fr 0;
   grid-template-areas: "sidebar primary"
@@ -38,7 +83,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr 1fr;
-  background: #171929;
+  background:var(--darkColor);
   color: white;
   padding: 1em;
   box-sizing: border-box;
@@ -48,7 +93,11 @@ body {
 
 /*Logo*/
 .logo {
-
+width: calc(100% - 100px);
+margin: 0 auto;
+background:blue;
+background-image: image-set(url ('../../src/images/platzi-video.png') 1x, url ('../src/images/platzi-video.png') 2x);
+height: 50px;
 }
 .logo-image {
   margin: 0;
@@ -67,21 +116,42 @@ body {
   padding: 0 20px;
 }
 
-.myPlaylist-item a {
-  color: white;
-  text-decoration: none;
-  font-size: .8em;
-  display: block;
-  margin-bottom: 7px;
-}
-.myPlaylist-item:last-child a {
-  margin-bottom: 0;
+.myPlaylist :any-link:hover {
+ transform: scale(1.8);
 }
 
 
-.myPlaylist-item a:hover {
-  text-decoration: underline;
+.myPlaylist-item  {  
+  & a{
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 7px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:last-child a{
+    margin-bottom: 0;
+  }
+  @nest .myPlaylist &{  /* .myPlaylist .myPlaylist-item */
+    border:5px dashed blue
+  }
 }
+
+
+.myPlaylist-item:matches(:last-child, :nth-last-of-type(3)) {
+  background: red
+}
+
+.myPlaylist-item:matches(:last-child, :nth-last-of-type(3)) {
+  background: blue
+}
+
+
+
+
 
 /*playlistFriends*/
 
@@ -254,3 +324,16 @@ body {
     opacity: 1;
   }
 }
+
+
+@custom-media --small screen and (width <= 768px);
+
+
+@media (--small) {
+  body{
+    border: 50px solid blue
+  }
+}
+
+
+
