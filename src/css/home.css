@@ -1,6 +1,7 @@
 @import './body.css';
 @import './featuring.css';
-@import './home-layoud.css';
+
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -139,7 +140,7 @@ height: 50px;
     margin-bottom: 0;
   }
   @nest .myPlaylist &{  /* .myPlaylist .myPlaylist-item */
-    border:5px dashed blue
+    border:1px dashed blue
   }
 }
 
@@ -277,6 +278,7 @@ height: 50px;
 }
 */
 .primaryPlaylistItem-image {
+  /* dasd */
 }
 
 .primaryPlaylistItem img {
