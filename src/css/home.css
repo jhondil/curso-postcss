@@ -1,3 +1,6 @@
+@import './body.css';
+@import './featuring.css';
+@import './home-layoud.css';
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
